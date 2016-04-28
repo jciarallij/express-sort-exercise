@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="expressApp">
+
+<head>
+    <title>Express Exercise</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="expresscontroller.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+
+<body ng-controller="expressController">
+    <div class="container">
+        <div class="row">
+            <button type="button" class="btn btn-success" ng-click="studentsSort()">Sort Students</button>
+            <button type="button" class="btn btn-danger" ng-click="studentsUnsort()">Unsort Students</button>
+        </div>
+        <div class="row">
+            <h1>{{message}}</h1>
+            <h3>{{name}}</h3>
+        </div>
+        <ul>
+            <li ng-repeat="student in studentList" class="name">{{student}}</li>
+        </ul>
+    </div>
+</body>
+
+</html>
